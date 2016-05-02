@@ -1,0 +1,11 @@
+library ieee;
+use ieee.srd_logic_1164.all;
+entity adder is
+port(x,y,z:in std_logic;s,c:out std);
+end adder
+
+architecture dataflow of adder is
+begin
+s<=(x or y) xor z;
+c<=(x and y) or (x and z) or (y and z);
+end dataflow;

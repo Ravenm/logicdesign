@@ -1,0 +1,43 @@
+|register8
+rin[0] => rout[0]~reg0.DATAIN
+rin[1] => rout[1]~reg0.DATAIN
+rin[2] => rout[2]~reg0.DATAIN
+rin[3] => rout[3]~reg0.DATAIN
+rin[4] => rout[4]~reg0.DATAIN
+rin[5] => rout[5]~reg0.DATAIN
+rin[6] => rout[6]~reg0.DATAIN
+rin[7] => rout[7]~reg0.DATAIN
+en => rout[7]~reg0.ENA
+en => rout[6]~reg0.ENA
+en => rout[5]~reg0.ENA
+en => rout[4]~reg0.ENA
+en => rout[3]~reg0.ENA
+en => rout[2]~reg0.ENA
+en => rout[1]~reg0.ENA
+en => rout[0]~reg0.ENA
+clr => rout[0]~reg0.ACLR
+clr => rout[1]~reg0.ACLR
+clr => rout[2]~reg0.ACLR
+clr => rout[3]~reg0.ACLR
+clr => rout[4]~reg0.ACLR
+clr => rout[5]~reg0.ACLR
+clr => rout[6]~reg0.ACLR
+clr => rout[7]~reg0.ACLR
+clk => rout[0]~reg0.CLK
+clk => rout[1]~reg0.CLK
+clk => rout[2]~reg0.CLK
+clk => rout[3]~reg0.CLK
+clk => rout[4]~reg0.CLK
+clk => rout[5]~reg0.CLK
+clk => rout[6]~reg0.CLK
+clk => rout[7]~reg0.CLK
+rout[0] <= rout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[1] <= rout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[2] <= rout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[3] <= rout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[4] <= rout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[5] <= rout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[6] <= rout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rout[7] <= rout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

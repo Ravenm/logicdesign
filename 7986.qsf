@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV GX"
-set_global_assignment -name DEVICE auto
+set_global_assignment -name DEVICE EP4CGX15BF14C6
 set_global_assignment -name TOP_LEVEL_ENTITY register8
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:09:15  APRIL 23, 2016"
@@ -50,9 +50,36 @@ set_global_assignment -name VHDL_FILE register8.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE leftshift.vhd
 set_global_assignment -name VHDL_FILE rightshift.vhd
 set_global_assignment -name VHDL_FILE regor.vhd
 set_global_assignment -name VHDL_FILE regand.vhd
 set_global_assignment -name VHDL_FILE cpu.vhd
+set_global_assignment -name VHDL_FILE decoder.vhd
+set_global_assignment -name VHDL_FILE mplx.vhd
+set_global_assignment -name VHDL_FILE seg.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_F9 -to rout[0]
+set_location_assignment PIN_K10 -to rout[1]
+set_location_assignment PIN_F10 -to rout[2]
+set_location_assignment PIN_F11 -to rout[3]
+set_location_assignment PIN_G9 -to rout[4]
+set_location_assignment PIN_J13 -to rout[5]
+set_location_assignment PIN_G10 -to rout[6]
+set_location_assignment PIN_L13 -to rout[7]
+set_location_assignment PIN_F13 -to rin[0]
+set_location_assignment PIN_J7 -to clk
+set_location_assignment PIN_J6 -to clr
+set_location_assignment PIN_F12 -to en
+set_location_assignment PIN_H12 -to rin[1]
+set_location_assignment PIN_L12 -to rin[2]
+set_location_assignment PIN_H10 -to rin[3]
+set_location_assignment PIN_L11 -to rin[4]
+set_location_assignment PIN_M11 -to rin[5]
+set_location_assignment PIN_K11 -to rin[6]
+set_location_assignment PIN_K13 -to rin[7]
+set_location_assignment PIN_N5 -to ~ALTERA_NCEO~
+set_location_assignment PIN_A5 -to ~ALTERA_DATA0~
+set_location_assignment PIN_B5 -to ~ALTERA_ASDO~
+set_location_assignment PIN_C5 -to ~ALTERA_NCSO~
+set_location_assignment PIN_A4 -to ~ALTERA_DCLK~

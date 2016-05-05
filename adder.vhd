@@ -1,15 +1,14 @@
-library ieee;
-use ieee.std_logic_1164.all;
-entity adder is
-port(
-	a,b,cin:in std_logic; --add a b and carryin
-	sum,cout:out std_logic; --sum and carryout
-);
-end adder;
-
-architecture dataflow of adder is
-begin
-sum<=(a or b) xor cin;
-cout<=(a and b) or (a and cin) or (b and cin);
-end dataflow;
-
+library ieee; 
+use ieee.std_logic_1164.all; 
+entity adder is port ( A: in std_logic; 
+B: in std_logic; 
+O: out std_logic; 
+C: out std_logic ); 
+end entity adder; 
+architecture behave of adder is 
+begin 
+process(A,B) 
+begin O <= A xor B; 
+C <= A and B; 
+end process; 
+end behave;

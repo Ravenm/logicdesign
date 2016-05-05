@@ -1,0 +1,100 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoder is
+port(
+		inst:in std_logic_vector(18 downto 0);
+		en: in std_logic;
+		rega,regb: in std_logic_vector(7 downto 0);
+		pinout:out std_logic_vector(7 downto 0)
+		
+);
+end decoder;
+
+architecture dataflow of decoder is
+begin
+	process(en)
+	begin
+		if en = '1' then
+			if inst(0) = '0' then
+				if inst(2) = '0' then
+					if inst(4) = '0' then
+						--add
+						if inst(12) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					else
+						--or
+						if inst(12) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					end if;
+				else
+					if inst (4) = '0' then
+						--and
+						if inst(12) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					else
+						--sub
+						if inst(12) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					end if;
+				end if;
+			else
+				if inst(1) = '0' then
+					if inst(2) = '0' then
+						--mov reg
+						if inst(12) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					else
+						--mov imme
+						if inst(7) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					end if;
+				else
+					if inst(2) = '0' then
+						--shl shr
+						if inst(12) = '0' then
+							--shl
+							if inst(15) = '0' then
+								--al
+							else
+								--bl
+							end if;
+						else
+							--shr
+							if inst(15) = '0' then
+								--al
+							else
+								--bl
+							end if;
+						end if;
+					else
+						--inc
+						if inst(15) = '0' then
+							--al
+						else
+							--bl
+						end if;
+					end if;
+				end if;
+			end if;
+		end if;
+	end process;
+end dataflow;
